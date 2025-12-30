@@ -71,7 +71,7 @@ There will be no midterm and final exams.
 
 ## Final Grade
 
-Grades will be based on the homework (50%) + final project (30%) + class attendance, quizzes, and participation (Slack, office hours) (20%). Auditors must earn a respectable D to gain recording of this course.
+Grades will be based on the homework (40%) + final project (40%) + class attendance, quizzes, and participation (Slack, office hours) (20%). Auditors must earn a respectable D to gain recording of this course.
 
 ## UCLA ADA Policy
 
