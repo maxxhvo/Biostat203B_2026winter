@@ -7,11 +7,11 @@ title: Biostat 203B
 
 ## Lecture
 
-- **Lec 1** schedule: 
+- **Lec 1** [schedule](https://ucla-biostat-203b.github.io/2026winter/schedule/schedule-lec1.html): 
 
     Tue (lecture and lab) 2pm-5:50pm @ NRB 132
 
-- [**Lec 82 (MDSH)** schedule](https://ucla-biostat-203b.github.io/2026winter/schedule/schedule-lec82.html)
+- **Lec 82 (MDSH)** [schedule](https://ucla-biostat-203b.github.io/2026winter/schedule/schedule-lec82.html)
 
 ## Instructor
 
@@ -21,23 +21,23 @@ Phone: (310)794-7835\
 Email: <huazhou@ucla.edu>  
 
 Office hours:  
-- Lec 1: Tue 6pm-7pm @ CHS 21-254A (the hour after each lecture)  
-- Lec 82 (MDSH): the hour after each lecture @ [Zoom](https://ucla.zoom.us/j/92818013711) or the class room, and timely help on Slack  
+- Lec 1: Tue 6pm-7pm @ CHS 21-254A (the hour after each lecture), and timely help on Slack  
+- Lec 82 (MDSH): the hour after each lecture @ [Zoom](https://ucla.zoom.us/j/93726996854) or the class room, and timely help on Slack  
 
 ## TA team
 
 - Lec 1
 
     Bowen Zhang <bowenzhangstats@ucla.edu>  
-    Office hours: ??? @ [Zoom](https://ucla.zoom.us/j/93726996854), ??? @ [Zoom](https://ucla.zoom.us/j/93726996854), and timely help on Slack
+    Office hours: ??? @ ???, and timely help on Slack
 
 - Lec 82 (MDSH)
 
     Tomoki Okuno <tomokiokuno0528@ucla.edu>  
-    Office hours: ??? @ [Zoom](https://ucla.zoom.us/j/93726996854), ??? @ [Zoom](https://ucla.zoom.us/j/92818013711), and timely help on Slack   
+    Office hours: ??? @ [Zoom](https://ucla.zoom.us/j/93726996854), and timely help on Slack   
 
     Yucai Shao <yucais@ucla.edu>  
-    Office hours: ??? @ [Zoom](https://ucla.zoom.us/j/93726996854), ??? @ [Zoom](https://ucla.zoom.us/j/92818013711), and timely help on Slack   
+    Office hours: ??? @ [Zoom](https://ucla.zoom.us/j/93726996854), and timely help on Slack   
 
 ## Course Description
 
@@ -67,11 +67,11 @@ There will be 4-6 homework assignments throughout the quarter.
 
 ## Exam
 
-There will be no midterm and final exams.
+There are no midterm and final exams. There is a final project instead.
 
 ## Final Grade
 
-Grades will be based on the homework (40%) + final project (40%) + class attendance, quizzes, and participation (Slack, office hours) (20%). Auditors must earn a respectable D to gain recording of this course.
+Grades will be based on the homework (50%) + final project (30%) + class attendance and participation (Slack, office hours) (20%). Auditors must earn a respectable D to gain recording of this course.
 
 ## UCLA ADA Policy
 
