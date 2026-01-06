@@ -452,7 +452,7 @@ docker run -ti --rm -v "$PWD":/home/docker -w /home/docker -u docker r-base Rscr
 Suppose we have a Shiny app `census-app` with contents: `app.R`, `data/counties.rds`, and `helpers.R`. It has dependencies `maps` and `mapproj` R packages. We want to deploy the Shiny app to a GCP instance. We can use following Dockerfile to compile an image
 ```{bash}
 #| eval: false
-cat ../19-shiny/census-app/Dockerfile
+cat ../11-shiny/census-app/Dockerfile
 ```
 and then deploy to cloud.
 
