@@ -97,7 +97,7 @@ Unless you reproduce the computing environment (algorithms, dataset, tuning para
 
 - Distribute method implementation, e.g., R/Python/Julia packages, on GitHub or bitbucket.
 
-- Dynamic document: RMarkdown for R, [Jupyter](http://jupyter.org) for Julia/Python/R, Quarto.
+- Dynamic document: [Quarto](https://quarto.org/), RMarkdown for R, [Jupyter](http://jupyter.org) for Julia/Python/R.
 
 - Docker container for reproducing a computing environment.
 
