@@ -14,7 +14,8 @@ format:
     code-fold: false
     link-external-icon: true
     link-external-newwindow: true
-engine: knitr
+comments:
+  hypothesis: true
 ---
 
 ## Outline
