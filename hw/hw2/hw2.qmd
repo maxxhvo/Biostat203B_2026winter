@@ -58,7 +58,7 @@ Which function is fastest? Is there difference in the (default) parsed data type
 
 ### Q1.2 User-supplied data types
 
-Re-ingest `admissions.csv.gz` by indicating appropriate column data types in `read_csv`. Does the run time change? How much memory does the result tibble use? (Hint: `col_types` argument in `read_csv`.)
+Re-ingest `admissions.csv.gz` by indicating appropriate column data types in `read_csv`. Does the run time change? How much memory does the result tibble use? (Hint: `col_types` argument in `read_csv`; result tibble should be less than 50MB.)
 
 ## Q2. Ingest big data files
 
@@ -105,11 +105,11 @@ Display the first 10 lines of the new file `labevents_filtered.csv.gz`. How many
   <img src="./arrow_logo.png" width="30%">
 </p>
 
-Our second strategy is to use [Apache Arrow](https://arrow.apache.org/) for larger-than-memory data analytics. Unfortunately Arrow does not work with gz files directly. First decompress `labevents.csv.gz` to `labevents.csv` and put it in the current working directory (do not add it in git!). To save render time, put `#| eval: false` at the beginning of this code chunk. TA will change it to `#| eval: true` when rendering your qmd file.
+Our second strategy is to use [Apache Arrow](https://arrow.apache.org/) for larger-than-memory data analytics. Unfortunately Arrow does not work with gz files directly. First decompress `labevents.csv.gz` to `labevents.csv` and put it in the current working directory (do not add it in Git!). To save render time, put `#| eval: false` at the beginning of this code chunk. TA will change it to `#| eval: true` when rendering your qmd file.
 
 Then use [`arrow::open_dataset`](https://arrow.apache.org/docs/r/reference/open_dataset.html) to ingest `labevents.csv`, select columns, and filter `itemid` as in Q2.3. How long does the ingest+select+filter process take? Display the number of rows and the first 10 rows of the result tibble, and make sure they match those in Q2.3. (Hint: use `dplyr` verbs for selecting columns and filtering rows.)
 
-Write a few sentences to explain what is Apache Arrow. Imagine you want to explain it to a layman in an elevator. 
+Write a few sentences to explain what Apache Arrow is. Imagine you want to explain it to a layman in an elevator. 
 
 ### Q2.5 Compress `labevents.csv` to Parquet format and ingest/select/filter
 
@@ -119,7 +119,7 @@ Write a few sentences to explain what is Apache Arrow. Imagine you want to expla
 
 Re-write the csv file `labevents.csv` in the binary Parquet format (Hint: [`arrow::write_dataset`](https://arrow.apache.org/docs/r/reference/write_dataset.html).) How large is the Parquet file(s)? How long does the ingest+select+filter process of the Parquet file(s) take? Display the number of rows and the first 10 rows of the result tibble and make sure they match those in Q2.3. (Hint: use `dplyr` verbs for selecting columns and filtering rows.)
 
-Write a few sentences to explain what is the Parquet format. Imagine you want to explain it to a layman in an elevator.
+Write a few sentences to explain what the Parquet format is. Imagine you want to explain it to a layman in an elevator.
 
 ### Q2.6 DuckDB
 
@@ -129,7 +129,7 @@ Write a few sentences to explain what is the Parquet format. Imagine you want to
 
 Ingest the Parquet file, convert it to a DuckDB table by [`arrow::to_duckdb`](https://arrow.apache.org/docs/r/reference/to_duckdb.html), select columns, and filter rows as in Q2.5. How long does the ingest+convert+select+filter process take? Display the number of rows and the first 10 rows of the result tibble and make sure they match those in Q2.3. (Hint: use `dplyr` verbs for selecting columns and filtering rows.)
 
-Write a few sentences to explain what is DuckDB. Imagine you want to explain it to a layman in an elevator.
+Write a few sentences to explain what DuckDB is. Imagine you want to explain it to a layman in an elevator.
 
 ## Q3. Ingest and filter `chartevents.csv.gz`
 
