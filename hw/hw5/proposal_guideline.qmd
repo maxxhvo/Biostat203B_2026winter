@@ -1,6 +1,7 @@
 ---
 title: "Final Project Proposal Presentation Guideline"
 subtitle: "CHS 33-105, Sunday, Feb 8, 2026"
+author: "Drs. Hua Zhou and Jin Zhou"
 format:
   html:
     theme: cosmo
