@@ -1,6 +1,7 @@
 ---
 title: "Biostat 203B/212A Final Project: MIMIC-IV Machine Learning"
 subtitle: "End-to-end, reproducible, scalable ML pipeline in R"
+author: "Drs. Hua Zhou and Jin Zhou"
 format:
   html:
     theme: cosmo

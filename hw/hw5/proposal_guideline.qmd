@@ -23,7 +23,7 @@ You don't need to send slides ahead of time. Just bring it on the day of present
 
 ## Presentation
 
-Each team will give a 15-minute presentation on their final project proposal, followed by a 5-minute Q&A session. The presentation should cover at the following aspects.
+Each team will give a 15-minute presentation on their final project proposal, followed by a 5-minute Q&A session. The presentation should cover at least the following aspects.
 
 ### Team members
 
@@ -59,9 +59,9 @@ For example: We will include adult patients (age >= 18) who underwent cardiac su
 
 ### Modeling approach
 
-What modeling approach will you use? Why is this approach suitable for your prediction task?
+What are the modeling approaches (at least 3) will you use? Why is are these approaches suitable for your prediction task?
 
-For example: We will use an elastic net regularized logistic regression as the baseline model, random forest, xgboost, and neural network. We chose these models because they can handle high-dimensional data, capture complex relationships between features and the outcome, and are robust to overfitting.
+For example: We will use an elastic net regularized logistic regression as the baseline model, random forest, xgboost, and neural network. We may also try model stacking if time permits. We chose these models because they can handle high-dimensional data, capture complex relationships between features and the outcome, and are robust to overfitting.
 
 ### Evaluation metrics
 
