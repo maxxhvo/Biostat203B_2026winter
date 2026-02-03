@@ -173,3 +173,8 @@ Summarize the following information about the ICU stay cohort `mimic_icu_cohort`
 
 - Length of ICU stay `los` vs first ICU unit
 
+## Q9. AI assistant
+
+Which AI assistants (e.g., GitHub Copilot) do you use when working on this assignment? Which AI model (e.g., GPT-5 mini, GPT-5, Claude Sonnet 4.5) does the AI assistant use? How do you use them? Do you think they help improve your productivity? 
+
+Give 5 instances where AI model gave incorrect or misleading answers. You can use screenshots or copy-paste the Q&A.
