@@ -1,7 +1,9 @@
 ---
 title: "Final Project Proposal Presentation Guideline"
-subtitle: "CHS 33-105, Sunday, Feb 8, 2026"
-author: "Drs. Hua Zhou and Jin Zhou"
+subtitle: | 
+  Lec 82: CHS 33-105, Sunday, Feb 8, 2026 \ 
+  Lec 1: NRB 132, Tuesday, Feb 10, 2026
+author: "Drs. Hua Zhou (Lec 1, Lec 82) and Jin Zhou (Lec 82)"
 format:
   html:
     theme: cosmo
@@ -15,13 +17,16 @@ format:
 
 ## Team presentation
 
-For a team of 3-4 students and sign up for a presentation slot at [Google Calendar](https://calendar.app.google/fQT9eWokqq925YZx5) (navigate to Feb 8, 2026).
+For a team of 3-4 students and sign up for a presentation slot at 
 
-The main purpose of the proposal presentation is to brainstorm ideas and get feedback from instructors and classmates. Each team member must present; you can divide the presentation among team members as you see fit. The presentation will be graded based only on whether the student presented and participation in discussions.
+- Lec 82: [Google Calendar](https://calendar.app.google/fQT9eWokqq925YZx5) (navigate to Feb 8, 2026); or 
+- Lec 1: [Google Calendar](https://calendar.app.google/ydhbDaop6ytfru426) (navigate to Feb 10, 2026)  
 
-You don't need to send slides ahead of time. Just bring it on the day of presentation (either on your laptop or a USB drive). You can use Quarto, PowerPoint, Google Slides, Keynote, or any other presentation software you are comfortable with.
+The main purpose of the proposal presentation is to brainstorm ideas and get feedback from instructors and classmates. Each team member must present; you can divide the presentation among team members as you see fit. The presentation will be graded solely on whether the student presented and participation in discussions.
 
-You may read the draft [guideline](https://ucla-biostat-203b.github.io/2026winter/hw/hw5/finalreport_guideline.html) for the final report. However, it is work in progress and likely to substantially. The presentation should focus on the key aspects of your project proposal as outlined below.
+You don't need to send slides ahead of time. Just bring it on the day of presentation on a USB drive; you will present using Dr. Hua Zhou's laptop. You can use Quarto, PowerPoint, Google Slides, Keynote, or any other presentation software you are comfortable with.
+
+You may read the draft [guideline](https://ucla-biostat-203b.github.io/2026winter/hw/hw5/finalreport_guideline.html) for the final report. However, it is work in progress and likely to change substantially. The presentation should focus on the key aspects of your project proposal as outlined below.
 
 ## Presentation
 
@@ -47,7 +52,8 @@ For example: We choose the time of ICU admission as the index time, because it a
 
 What features will you use for your prediction? Why are these features relevant to the clinical outcome? 
 
-For example: We will use the following features in predictive model
+For example: We will use the following features in predictive model  
+
 - demographic information: age, sex, race, BMI at ICU admission
 - comorbidities: hypertension, diabetes, chronic kidney disease
 - vital signs: heart rate, blood pressure, respiratory rate, temperature
