@@ -1,0 +1,92 @@
+---
+title: "Final Project Proposal Presentation Guideline"
+subtitle: | 
+  Lec 82: CHS 33-105, Sunday, Feb 8, 2026 \ 
+  Lec 1: NRB 132, Tuesday, Feb 10, 2026
+author: "Drs. Hua Zhou (Lec 1, Lec 82) and Jin Zhou (Lec 82)"
+format:
+  html:
+    theme: cosmo
+    embed-resources: true
+    number-sections: true
+    toc: true
+    toc-depth: 4
+    toc-location: left
+    code-fold: false
+---
+
+## Team presentation
+
+For a team of 3-4 students and sign up for a presentation slot at 
+
+- Lec 82: [Google Calendar](https://calendar.app.google/fQT9eWokqq925YZx5) (navigate to Feb 8, 2026); or 
+- Lec 1: [Google Calendar](https://calendar.app.google/ydhbDaop6ytfru426) (navigate to Feb 10, 2026)  
+
+The main purpose of the proposal presentation is to brainstorm ideas and get feedback from instructors and classmates. Each team member must present; you can divide the presentation among team members as you see fit. The presentation will be graded solely on whether the student presented and participation in discussions.
+
+You don't need to send slides ahead of time. Just bring it on the day of presentation on a USB drive; you will present using Dr. Hua Zhou's laptop. You can use Quarto, PowerPoint, Google Slides, Keynote, or any other presentation software you are comfortable with.
+
+You may read the draft [guideline](https://ucla-biostat-203b.github.io/2026winter/hw/hw5/finalreport_guideline.html) for the final report. However, it is work in progress and likely to change substantially. The presentation should focus on the key aspects of your project proposal as outlined below.
+
+## Presentation
+
+Each team will give a 15-minute presentation on their final project proposal, followed by a 5-minute Q&A session. The presentation should cover at least the following aspects.
+
+### Team members
+
+### Project title
+
+### Clinical outcome
+
+Which clinical outcome are you predicting? Why is it clinically meaningful?
+
+For example: We want to predict whether a patient will have a prolonged ICU stay (>3 days) after cardiac surgery, because prolonged ICU stay is associated with higher morbidity and mortality. It also increases healthcare costs and resource utilization.
+
+### Index time
+
+What is the index time (time zero) for your prediction? Why did you choose this time point?
+
+For example: We choose the time of ICU admission as the index time, because it allows us to capture the patient's condition and risk factors at the start of their ICU stay.
+
+### Features
+
+What features will you use for your prediction? Why are these features relevant to the clinical outcome? 
+
+For example: We will use the following features in predictive model  
+
+- demographic information: age, sex, race, BMI at ICU admission
+- comorbidities: hypertension, diabetes, chronic kidney disease
+- vital signs: heart rate, blood pressure, respiratory rate, temperature
+- lab results: albumin, hemoglobin, creatinine, electrolytes
+
+### Cohort creation
+
+How will you create your cohort from MIMIC-IV? What inclusion and exclusion criteria will you apply? What's the expected cohort size? What's the expected prevalence of the outcome?
+
+For example: We will include adult patients (age >= 18) who underwent cardiac surgery and were admitted to the ICU. We will exclude patients with missing key data (e.g., vital signs, lab results) or those who died during the ICU stay. Based on preliminary analysis, we expect to have approximately 5,000 patients in our cohort, with an estimated prevalence of prolonged ICU stay of around 20%.
+
+### Modeling approach
+
+What are the modeling approaches (at least 3) will you use? Why are these approaches suitable for your prediction task?
+
+For example: We will use an elastic net regularized logistic regression as the baseline model, random forest, xgboost, and neural network. We may also try model stacking if time permits. We chose these models because they can handle high-dimensional data, capture complex relationships between features and the outcome, and are robust to overfitting.
+
+### Evaluation metrics
+
+What evaluation metrics will you use to assess the performance of your model? Why are these metrics appropriate for your prediction task?
+
+For example: We will use area under the receiver operating characteristic curve (AUC-ROC) to evaluate the model's discrimination ability, as it measures how well the model can distinguish between patients with and without prolonged ICU stay. We will also use calibration plots to assess how well the predicted probabilities align with the observed outcomes, as accurate risk estimation is crucial for clinical decision-making.
+
+### Timeline
+
+Provide a timeline for your project, including key milestones and deliverables.
+
+For example: 
+
+- Week 6 (in parallel to 203B HW3): Finalize cohort creation and data extraction from MIMIC-IV
+- Week 7 (in parallel to 203B HW4): Data preprocessing and feature engineering; Shiny app development for exploratory data analysis and visualization
+- Week 8-9: Model development, hyperparameter tuning, model evaluation, and validation
+- Week 10-11: Final report writing and preparation for final presentation. Please note that **the final report and coding should be individual work**, even though the project is done in teams.
+
+
+

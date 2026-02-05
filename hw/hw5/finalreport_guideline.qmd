@@ -1,0 +1,261 @@
+---
+title: "Biostat 203B/212A Final Project: MIMIC-IV Machine Learning"
+subtitle: "End-to-end, reproducible, scalable ML pipeline in R"
+author: "Drs. Hua Zhou and Jin Zhou"
+format:
+  html:
+    theme: cosmo
+    embed-resources: true
+    number-sections: true
+    toc: true
+    toc-depth: 4
+    toc-location: left
+    code-fold: false
+---
+
+**Warning**: This guideline is work in progress. Please check back for updates.
+
+## Overview
+
+### Goal
+
+Build a **reproducible**, **scalable**, and **well-validated** machine learning model using **MIMIC-IV** to predict a clinically meaningful outcome, and communicate results in a **Quarto report** + a small **interactive Shiny deliverable**.
+
+### Outcomes
+
+Identify a clinically meaningful outcome to predict. Examples include (but are not limited to):  
+
+- **Prolonged ICU stay** (demo): We will practice in HW3-5 how to define this outcome and create a cohort. Your team will implement a similar pipeline for a different outcome of your choice.  
+- 30-day readmission after hospital discharge  
+- 30-day mortality after hospital admission  
+- 30-day mortality after hospital discharge  
+- In-hospital mortality   
+- ICU readmission within the hospitalization   
+- Discharge destination (multiclass)  
+- ...
+
+### Deliverables
+
+1. Quarto document and **rendered HTML report**.
+2. Meaningful commits in **GitHub repo** documenting the project progress.
+3. **Shiny app** (at least 2 tabs: cohort explorer + model results).
+
+---
+
+## Clinical question & prediction framing
+
+### Clinical motivation
+
+Describe why this prediction task matters clinically or operationally.
+
+### Index time and prediction window
+
+Define:  
+
+- **Index time** (e.g., ICU admission time).
+- **Prediction window** (what information is allowed before prediction).
+- **Outcome definition** and any **exclusion criteria** (e.g., age < 18, missing identifiers).
+
+---
+
+## Data sources & cohort construction
+
+### Required sources / tables
+
+You must use either:  
+
+- **BigQuery + dbplyr** (preferred for scalability), *or*
+- Local files using **Arrow/Parquet/DuckDB** strategies.
+
+List the specific MIMIC-IV tables used (e.g., `patients`, `admissions`, `icustays`, labs, vitals tables).
+
+### Cohort definition
+
+Document inclusion/exclusion and the unit of analysis (e.g., ICU-stay-level).
+
+### Feature blocks
+
+#### Demographics / admission context
+
+- age, sex, race/ethnicity (with transparent recoding), admission type, etc.
+
+#### Labs
+
+What lab values will you include? Give justification. 
+
+#### Vitals
+
+What patient vitals will you include? Give justification.
+
+### Cohort summary table
+
+Provide counts:  
+
+- number of patients
+- number of ICU stays
+- outcome prevalence
+- missingness summary for key predictors
+
+---
+
+## Exploratory data analysis (EDA)
+
+### Required figure: patient-level trajectory
+
+Include at least one visualization showing a patient trajectory (e.g., ADT + ICU events or vitals trajectory).
+
+### Additional EDA
+
+- Outcome vs key predictors (plots)
+- Missingness patterns
+- Correlation/collinearity checks
+
+---
+
+## Modeling plan
+
+### Train/test split
+
+- Describe split fraction and random seed.
+
+- Choose between **ICU-level slit** and **patient-level split**. How to avoid leakage across multiple ICU stays per patient?
+
+### Preprocessing
+
+Describe and implement:
+
+- Data harmonization strategy (unit conversion, outlier handling)
+- Missingness strategy (imputation and/or missing indicators)
+- Categorical encoding
+- Feature engineering (normalization, log transforms, nonlinear terms, etc)
+
+### Models (require at least 3)
+
+Include at least three ML models of increasing complexity:  
+
+1. **Baseline**: logistic regression (or multinomial if multiclass)
+2. **Regularized**: lasso/ridge/elastic net
+3. **Nonlinear**: random forest / XGBoost / GBM / neural network
+4. **Stacked model**.
+
+### Resampling & tuning (required)
+
+- CV setup (e.g., 5-fold). How to ensure reproducibility?
+
+---
+
+## Evaluation & results
+
+### Metrics
+
+Choose suitable metrics to evaluate model performance on both CV and test set.
+
+- ROC AUC (binary) and/or appropriate multiclass AUC
+- PR AUC (if class imbalance)
+- Confusion-matrix-derived metrics at a chosen threshold
+- Calibration (calibration plot or Brier score)
+
+### Model comparison
+
+Provide a clear comparison table (or plot) across models (CV + test set).
+
+### Interpretation
+
+- Coefficients (for linear models)
+- Feature importance: Shapley values.
+
+---
+
+## Scaling requirement
+
+Demonstrate **one** of the following and describe why it was needed:
+
+### Option A: Database-first scaling
+
+- Transform in BigQuery (dbplyr), `collect()` only final cohort.
+
+### Option B: HPC run (Hoffman2)
+
+- Submit a job for tuning or heavy compute; include job script and log.
+
+### Option C: Cloud VM (GCP)
+
+- Run expensive steps on a VM; include instance details and command log.
+
+### Compute log (required)
+
+Summarize what ran where:  
+- environment (local / BigQuery / HPC / cloud)
+- key commands
+- runtime/memory notes (if available)
+
+---
+
+## Shiny app deliverable
+
+Your Shiny app must have **two tabs**:
+
+1. **Cohort Explorer**
+   - summaries + plots (demographics/labs/vitals + outcome)
+
+2. **Model Results**
+   - threshold slider + confusion matrix
+   - at least one performance plot (ROC or calibration)
+   - optional: “predict a single stay” demo
+
+Include:  
+
+- where the app code lives in the repo
+- how to run it
+
+---
+
+## Limitations & ethics
+
+### Limitations
+
+Discuss:  
+
+- measurement issues, missingness, selection bias
+- label leakage risks and how you avoided them
+- generalizability
+
+### Ethics & responsible use
+
+Brief statement addressing:  
+
+- privacy and appropriate use
+- MIMIC credentialing context
+- consequences of errors (false positives/negatives)
+
+### Note on date shifting
+
+Explain implications of MIMIC date shifting for time-based features and analyses.
+
+---
+
+## Grading rubric for 203B (100 pts)
+
+- Data pipeline & cohort correctness (20)
+- EDA + required trajectory visualization (10)
+- Modeling rigor (25)
+- Interpretation + limitations (10)
+- Scaling requirement + documentation (10)
+- Shiny app functionality and relevance (10)
+- Reproducibility + Git quality (10)
+- Ethics & responsible reporting (5)
+
+---
+
+## Grading rubric for 212A (100 pts)
+
+- Clinical question & prediction framing (10 pts)  
+- Cohort construction validity for modeling (10 pts)
+- Preprocessing & feature engineering (15 pts)
+- Model set: at least 3 models of increasing complexity (15 pts)
+- Resampling & hyperparameter tuning (15 pts)
+- Train/test split design & leakage avoidance (10 pts)
+- Evaluation metrics, calibration, and model comparison (15 pts)
+- Interpretation of model behavior (10 pts)
+- Reproducibility & reporting quality (5 pts)
+- Limitations & responsible ML/ethics (5 pts)
